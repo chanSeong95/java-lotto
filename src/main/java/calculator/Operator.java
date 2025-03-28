@@ -30,7 +30,7 @@ public enum Operator {
         return OPERATORS.get(symbol);
     }
 
-    public Integer calculate(Integer a, Integer b) {
-        return operateFunction.apply(a, b);
+    public int calculate(Integer leftOperand, Integer rightOperand) {
+        return operateFunction.apply(leftOperand, rightOperand);
     }
 }

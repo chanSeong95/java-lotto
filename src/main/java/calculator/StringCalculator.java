@@ -8,15 +8,17 @@ public class StringCalculator {
     private final Queue<String> queue;
 
     public StringCalculator(Queue<String> queue) {
-        this.queue = queue;
-
-        if (queue == null || queue.size() % 2 == 0)
+        if (queue == null || queue.size() % 2 == 0) {
             throw new IllegalArgumentException("Invalid input.");
+        }
+
+        this.queue = queue;
     }
 
     public int calculate() {
-        if (queue.isEmpty())
+        if (queue.isEmpty()) {
             throw new IllegalStateException("this stringCalculator has already been closed");
+        }
 
         int leftOperand = Integer.parseInt(queue.remove());
         while (!queue.isEmpty()) {
